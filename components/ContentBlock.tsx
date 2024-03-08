@@ -65,7 +65,7 @@ const ContentBlock = ({
         ref={component}
         className={`elemento-a-animar flex flex-col items-center justify-center w-5/6 sm:w-1/2 gap-6`}
       >
-        {Icon && Icon}
+        {Icon && <div className="text-7xl sm:text-8xl">{Icon}</div>}
         <h2
           className={`text-xl text-center sm:text-3xl ${
             alt ? "text-nightblue-50" : "text-silver-50"
