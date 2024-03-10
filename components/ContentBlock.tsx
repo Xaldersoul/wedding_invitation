@@ -43,7 +43,7 @@ const ContentBlock = ({
           ease: "power3.out(1,0.3)",
           scrollTrigger: {
             trigger: component.current,
-            start: "top bottom-=150px",
+            start: "top bottom-=100px",
             end: "bottom center",
             toggleActions: "play none none none",
           },
@@ -58,24 +58,26 @@ const ContentBlock = ({
       className={`${
         transparent ? "py-28" : "py-10"
       } w-full flex items-center justify-center ${
-        !transparent && "bg-nightblue-50"
-      } ${alt && "bg-silver-50"}`}
+        !transparent && "bg-complementary-50"
+      } ${alt && "bg-primary-50"}`}
     >
       <div
         ref={component}
         className={`elemento-a-animar flex flex-col items-center justify-center w-5/6 sm:w-1/2 gap-6`}
       >
         {Icon && <div className="text-7xl sm:text-8xl">{Icon}</div>}
-        <h2
-          className={`text-xl text-center sm:text-3xl ${
-            alt ? "text-nightblue-50" : "text-silver-50"
-          }`}
-        >
-          {title}
-        </h2>
+        {title && (
+          <h2
+            className={`text-xl text-center sm:text-3xl ${
+              alt ? "text-complementary-50" : "text-primary-50"
+            }`}
+          >
+            {title}
+          </h2>
+        )}
         <p
           className={`text-center ${
-            alt ? "text-nightblue-50" : "text-silver-50"
+            alt ? "text-slate-500" : "text-primary-50"
           }`}
         >
           {text}

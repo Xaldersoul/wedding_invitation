@@ -31,12 +31,15 @@ module.exports = {
         yellow: {
           50: "#FEC601",
         },
-        silver: {
-          50: "#e3e4e5",
+        primary: {
+          50: "#ffff",
           100: "#D3D3D3",
         },
-        nightblue: {
-          50: "#252850",
+        complementary: {
+          50: "rgb(190 174 157)",
+        },
+        cardcolor: {
+          50: "#ffff",
         },
       },
       backgroundImage: {

@@ -44,13 +44,13 @@ const CountdownTimer: React.FC = () => {
           timeRemaining.minutes +
           timeRemaining.seconds <=
         0 ? (
-          <p className="text-4xl text-nightblue-50">
+          <p className="text-4xl text-complementary-50">
             El gran dia finalmente llegó!
           </p>
         ) : (
           <>
-            <h1 className="font-semibold">El dia se acerca...</h1>
-            <p className="text-4xl text-nightblue-50">{`${timeRemaining.days} : ${timeRemaining.hours} : ${timeRemaining.minutes} : ${timeRemaining.seconds}`}</p>
+            <h1 className="font-semibold">¡El gran dia se acerca!</h1>
+            <p className="text-4xl text-complementary-50">{`${timeRemaining.days} : ${timeRemaining.hours} : ${timeRemaining.minutes} : ${timeRemaining.seconds}`}</p>
           </>
         ))}
     </>
