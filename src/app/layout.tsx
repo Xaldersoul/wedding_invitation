@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "15 Caro",
-  description: "¡Pagina promocional para el XV de Caro!",
+  title: "Invitacion",
+  description: "¡Te invitamos a que asistas a nuestro dia especial!",
 };
 
 export default function RootLayout({
