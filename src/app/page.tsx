@@ -1,3 +1,5 @@
+"use client";
+
 import { GiLargeDress } from "react-icons/gi";
 import { FaMusic, FaInstagram } from "react-icons/fa";
 
@@ -15,10 +17,18 @@ import Carousel from "../../components/Carousel";
 import ImageComponent from "../../components/ImageComponent";
 import Card from "../../components/Card";
 import { FaHeart } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import MusicButton from "../../components/MusicButton";
 
 export default function Home() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   return (
     <div>
+      {isMounted && <MusicButton />}
       <BackgroundImageComponent image={BackgroundImage} />
       <Hero />
       <Section />

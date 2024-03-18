@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
+import MusicButton from "../../components/MusicButton";
 
 export const metadata: Metadata = {
   title: "Invitacion",
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>{children}</body>
     </html>
   );
