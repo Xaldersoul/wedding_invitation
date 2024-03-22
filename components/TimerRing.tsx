@@ -2,11 +2,10 @@ import React from "react";
 
 interface Props {
   numero: number;
-  numeroInicial: number;
   text: string;
 }
 
-const TimerRing = ({ numero, numeroInicial, text }: Props) => {
+const TimerRing = ({ numero, text }: Props) => {
   const porcentajeCierre = (numero / 100) * 100;
 
   return (

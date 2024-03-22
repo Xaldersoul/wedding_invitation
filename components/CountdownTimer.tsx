@@ -52,26 +52,10 @@ const CountdownTimer: React.FC = () => {
           <>
             <h1 className="font-semibold">¡El gran dia se acerca!</h1>
             <div className="flex flex-row-reverse items-center justify-center gap-4">
-              <TimerRing
-                numero={timeRemaining.seconds}
-                numeroInicial={60}
-                text="segundos"
-              />
-              <TimerRing
-                numero={timeRemaining.minutes}
-                numeroInicial={60}
-                text="minutos"
-              />
-              <TimerRing
-                numero={timeRemaining.hours}
-                numeroInicial={24}
-                text="horas"
-              />
-              <TimerRing
-                numero={timeRemaining.days}
-                numeroInicial={365}
-                text="dias"
-              />
+              <TimerRing numero={timeRemaining.seconds} text="segundos" />
+              <TimerRing numero={timeRemaining.minutes} text="minutos" />
+              <TimerRing numero={timeRemaining.hours} text="horas" />
+              <TimerRing numero={timeRemaining.days} text="dias" />
             </div>
             {/* <p className="text-4xl text-complementary-50">{`${timeRemaining.days} : ${timeRemaining.hours} : ${timeRemaining.minutes} : ${timeRemaining.seconds}`}</p> */}
           </>
