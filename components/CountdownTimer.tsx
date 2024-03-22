@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import moment from "moment";
+import TimerRing from "./TimerRing";
 
 const CountdownTimer: React.FC = () => {
   const [timeRemaining, setTimeRemaining] = useState<{
@@ -50,7 +51,29 @@ const CountdownTimer: React.FC = () => {
         ) : (
           <>
             <h1 className="font-semibold">¡El gran dia se acerca!</h1>
-            <p className="text-4xl text-complementary-50">{`${timeRemaining.days} : ${timeRemaining.hours} : ${timeRemaining.minutes} : ${timeRemaining.seconds}`}</p>
+            <div className="flex flex-row-reverse items-center justify-center gap-4">
+              <TimerRing
+                numero={timeRemaining.seconds}
+                numeroInicial={60}
+                text="segundos"
+              />
+              <TimerRing
+                numero={timeRemaining.minutes}
+                numeroInicial={60}
+                text="minutos"
+              />
+              <TimerRing
+                numero={timeRemaining.hours}
+                numeroInicial={24}
+                text="horas"
+              />
+              <TimerRing
+                numero={timeRemaining.days}
+                numeroInicial={365}
+                text="dias"
+              />
+            </div>
+            {/* <p className="text-4xl text-complementary-50">{`${timeRemaining.days} : ${timeRemaining.hours} : ${timeRemaining.minutes} : ${timeRemaining.seconds}`}</p> */}
           </>
         ))}
     </>

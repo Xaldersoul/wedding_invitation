@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import MusicButton from "../../components/MusicButton";
 
 export const metadata: Metadata = {
   title: "Invitacion",
