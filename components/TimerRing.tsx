@@ -9,7 +9,7 @@ const TimerRing = ({ numero, text }: Props) => {
   const porcentajeCierre = (numero / 100) * 100;
 
   return (
-    <div className="relative w-32 h-32">
+    <div className="relative w-16 h-16 md:w-32 md:h-32">
       <div className="absolute inset-0 bg-gray-300 rounded-full"></div>
       <div
         className="absolute inset-0 bg-complementary-50 rounded-full"
@@ -20,7 +20,9 @@ const TimerRing = ({ numero, text }: Props) => {
       ></div>
       <div className="absolute inset-0 flex items-center justify-center flex-col">
         <span className="text-2xl font-bold text-primary-50">{numero}</span>
-        <span className="text-lg font-bold text-primary-50">{text}</span>
+        <span className="hidden md:block font-bold text-primary-50">
+          {text}
+        </span>
       </div>
     </div>
   );
